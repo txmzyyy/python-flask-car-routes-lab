@@ -13,3 +13,6 @@ def car_models():
         return {"models": existing_models}
     else:
         return {"error": "No such car model exists"}
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
