@@ -7,10 +7,10 @@ existing_models = ['Beedle', 'Crossroads', 'M2', 'Panique']
 def index():
     return "Welcome Flatiron Cars"
 
-@app.route('/models')
-def car_models():
-    if existing_models:
-        return {"models": existing_models}
+@app.route('/<model>')
+def car_model(model):
+    if model in existing_models:
+        return {"model": model}
     else:
         return {"error": "No such car model exists"}
 
